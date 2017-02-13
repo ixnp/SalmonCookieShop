@@ -1,0 +1,44 @@
+html{
+
+}
+body{
+  background-image: url(seattle.png);
+  o-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+  }
+.container1{
+  display: flex;
+flex-direction: column;
+justify-content: center;
+background-color: white;
+margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    align-items: center;
+
+}
+h1{
+  font-family:'Patua One', cursive;
+  color: #FF759D;
+
+
+}
+h2,nav{
+  font-family: Verdana;
+  color: #5D9997;
+
+p{
+  font-family: Georgia;
+  color: gray;
+}
+nav{
+  align-items: center;
+}
+
+ul{
+  list-style-type: none;
+}
