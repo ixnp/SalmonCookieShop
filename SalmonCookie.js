@@ -1,174 +1,72 @@
 // All Stores capacity is 60
 //pp= pike place location  //
-// var  = document.getElementById('one')
+// table with location, time, cookies sold that hour and total per day
+function salmonCookieShop(name, minimum, maximum, averageCookiesPerCustomer){
+  this.name= name;
+  this.minimum = minimum;
+  this.maximum = maximum;
+  this.averageCookiesPerCustomer = averageCookiesPerCustomer;
+  this.salePerHour= [];
+//Random number of customers//
+  this.customerPerHour = function(){
+    return (Math.round(Math.random()*(this.maximum - this.minimum + 1 ))) +  this.minimum;
+  };
+};
 
-//PikePlace//
-var salmonShopPikePlace = new Object()
+//cookies per hour//
 
-salmonShopPikePlace.name = "PikePlaceShop";
-salmonShopPikePlace.minimum= Math.round((Math.random() * 50 ) + 1);
-  console.log(salmonShopPikePlace.minimum);
+this.cookierPerHour = function (){
+  for(i=0; i<6; i++)
+    hour = Math.round(this.customerPerHour()*this.averageCookiesPerCustomer);
+    this.salePerHour.push(hour);
+    // push adds items to the end of the array and returns the new length//
+};
+// Justins way: I'm not sure I really understand what you were doing here//
+salmonCookieShop.prototype.render = function(){
+var trElement = document.createElement('tr');
 
-//max random calculation//
-salmonShopPikePlace.maximum = Math.round((Math.random() * 50 ) + 1) + salmonShopPikePlace.minimum;
-  console.log(salmonShopPikePlace.maximum);
+var tdElement = document.createElement('td');
 
-salmonShopPikePlace.ave = Math.round(2136 / 8);
-    console.log(salmonShopPikePlace.ave);
+  tdElement.innerHTML = this.total;
+  tdElement.innerHTML = this.name;
+  trElement.appendChild(tdElement);
 
-var resultsPikePlace = document.getElementById('PikePlace');
-resultsPikePlace.textContent = salmonShopPikePlace.name;
-var newEl = document.createElement('li');
-var newText = document.createTextNode('Minimum Customers: ' + salmonShopPikePlace.minimum);
-newEl.appendChild(newText);
-var position = document.getElementById('PikePlace')
-position.appendChild(newEl);
 
-var newElMax = document.createElement('li');
-var newTextMax = document.createTextNode('Maximum Customers: ' + salmonShopPikePlace.maximum);
-newElMax.appendChild(newTextMax);
-var positionMax = document.getElementById('PikePlace')
-position.appendChild(newElMax);
 
-var newElAve = document.createElement('li');
-var newTextAve = document.createTextNode('Average cookies per/hour: ' +salmonShopPikePlace.ave);
-newElAve.appendChild(newTextAve);
-var positionAve = document.getElementById('PikePlace')
-position.appendChild(newElAve);
-
-//SeaTac//
-
-var salmonShopSeaTac = new Object()
-
-salmonShopSeaTac.name = "SeaTac";
-salmonShopSeaTac.minimum= Math.round((Math.random() * 50 ) + 1);
-  console.log(salmonShopSeaTac.minimum);
-
-salmonShopSeaTac.maximum = Math.round((Math.random() * 50 ) + 1) + salmonShopSeaTac.minimum;
-  console.log(salmonShopSeaTac.maximum);
-
-salmonShopSeaTac.ave = Math.round(277 / 8);
-    console.log(salmonShopSeaTac.ave);
-
-var resultsSeaTac = document.getElementById('SeaTac');
-resultsSeaTac.textContent = salmonShopSeaTac.name;
-var newEl = document.createElement('li');
-var newText = document.createTextNode('Minimum Customers: ' + salmonShopSeaTac.minimum);
-newEl.appendChild(newText);
-var position = document.getElementById('SeaTac')
-position.appendChild(newEl);
-
-var newElMax = document.createElement('li');
-var newTextMax = document.createTextNode('Maximum Customers: ' + salmonShopSeaTac.maximum);
-newElMax.appendChild(newTextMax);
-var positionMax = document.getElementById('SeaTac')
-position.appendChild(newElMax);
-
-var newElAve = document.createElement('li');
-var newTextAve = document.createTextNode('Average cookies per/hour: ' +salmonShopSeaTac.ave);
-newElAve.appendChild(newTextAve);
-var positionAve = document.getElementById('SeaTac')
-position.appendChild(newElAve);
-
-//SouthCenter//
-var salmonShopSouthcenter = new Object()
-
-salmonShopSouthcenter.name = "Southcenter";
-salmonShopSouthcenter.minimum= Math.round((Math.random() * 50 ) + 1);
-  console.log(salmonShopSouthcenter.minimum);
-
-salmonShopSouthcenter.maximum = Math.round((Math.random() * 50 ) + 1) + salmonShopSouthcenter.minimum;
-  console.log(salmonShopSouthcenter.maximum);
-
-salmonShopSouthcenter.ave = Math.round(338 / 8);
-    console.log(salmonShopSouthcenter.ave);
-
-var resultsSouthcenter = document.getElementById('Southcenter');
-resultsSouthcenter.textContent = salmonShopSouthcenter.name;
-var newEl = document.createElement('li');
-var newText = document.createTextNode('Minimum Customers: ' + salmonShopSouthcenter.minimum);
-newEl.appendChild(newText);
-var position = document.getElementById('Southcenter')
-position.appendChild(newEl);
-
-var newElMax = document.createElement('li');
-var newTextMax = document.createTextNode('Maximum Customers: ' + salmonShopSouthcenter.maximum);
-newElMax.appendChild(newTextMax);
-var positionMax = document.getElementById('Southcenter')
-position.appendChild(newElMax);
-
-var newElAve = document.createElement('li');
-var newTextAve = document.createTextNode('Average cookies per/hour: ' +salmonShopSouthcenter.ave);
-newElAve.appendChild(newTextAve);
-var positionAve = document.getElementById('Southcenter')
-position.appendChild(newElAve);
-
-//BellevueSquare//
-var salmonBellevueSquare = new Object()
-
-salmonBellevueSquare.name = "BellevueSquare";
-salmonBellevueSquare.minimum= Math.round((Math.random() * 50 ) + 1);
-  console.log(salmonBellevueSquare.minimum);
-
-salmonBellevueSquare.maximum = Math.round((Math.random() * 50 ) + 1) + salmonBellevueSquare.minimum;
-  console.log(salmonBellevueSquare.maximum);
-
-salmonBellevueSquare.ave = Math.round(338 / 8);
-    console.log(salmonBellevueSquare.ave);
-
-var resultsBellevueSquare = document.getElementById('BellevueSquare');
-resultsBellevueSquare.textContent = salmonBellevueSquare.name;
-var newEl = document.createElement('li');
-var newText = document.createTextNode('Minimum Customers: ' + salmonBellevueSquare.minimum);
-newEl.appendChild(newText);
-var position = document.getElementById('BellevueSquare')
-position.appendChild(newEl);
-
-var newElMax = document.createElement('li');
-var newTextMax = document.createTextNode('Maximum Customers: ' + salmonBellevueSquare.maximum);
-newElMax.appendChild(newTextMax);
-var positionMax = document.getElementById('BellevueSquare')
-position.appendChild(newElMax);
-
-var newElAve = document.createElement('li');
-var newTextAve = document.createTextNode('Average cookies per/hour: ' +salmonBellevueSquare.ave);
-newElAve.appendChild(newTextAve);
-var positionAve = document.getElementById('BellevueSquare')
-position.appendChild(newElAve);
+  for(var i=0; i<6; i++){
+    td = document.createElement('td');
+    td.innerHTML = the.salePerHour[i];
+    trElement.appendChild(td);
+}
+//this is how I was trying to do it on my own//
+// this.renderAsRow = function(){
+//   var shopTable = document.getElementById('shopTable');
+//   var trElement = document.createElement('tr');
+//   var nameData = document.createElement('td');
+//   var minData = document.createElement('td');
+//   var maxData = document.createElement('td');
+//   var aveData = document.createElement('td');
+//   nameData.textContent = this.name;
+//   minData.textContent = this.minimum;
+//   maxData.textContent = this.maximum;
+//   aveData.textContent = this.averageCookiesPerCustomer;
+//   trElment.appendChild(nameData);
+//   trElment.appendChild(minData);
+//   trElment.appendChild(maxData);
+//   trElement.appendChild(aveData);
+//   shopTable.appendChild(trElement);
+// }
 
 
 //
-// var maximumCustomers = document.getElementById('PikePlace');
-// console.log(PikePlace);
-// maximumCustomers.textContent = Southcenter;
+// // // shops///
 //
-// document.write(myObj.name);
-// document.write("<br/>");
-// document.write(myObj.age);
-// document.write("<br/>");
-// document.write(myObj.getAge());
-
-
-
-
-//
-// var aveCookiesPike = aveCookies(2136);
-// console.log(aveCookiesPike);
-//
-// var aveCookiesSeaTac = aveCookies(277);
-// console.log(aveCookiesSeaTac);
-//
-// var aveCookiesSouthcenter = aveCookies(338);
-// console.log(aveCookiesSouthcenter);
-//
-// var aveCookiesBellevueSquare = aveCookies(879);
-// console.log(aveCookiesBellevueSquare);
-//
-//
-// //Average cookies per customer//
-//
-//
-// // // }
-// // var averageCookies = document.getElementById('average');
-// // console.log(averageCookies);
-// // averageCookies.textContent = ave;
+var PikePlace = new salmonCookieShop ('Pike Place',77,88, 5.2);
+var SeaTac =  new salmonCookieShop ('SeaTac', 6, 24, 1.2);
+var SouthCenter = new salmonCookieShop ('SouthCenter', 11, 38, 1.9);
+var BellevueSquare = new salmonCookieShop ('Bellevue Square', 20, 48, 3.3);
+}
+// PikePlace.render();
+// SeaTac.render();
+// SouthCenter.render();
+// BellevueSquare.render();
