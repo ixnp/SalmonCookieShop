@@ -9,18 +9,27 @@ function salmonCookieShop(name, minimum, maximum, averageCookiesPerCustomer){
   this.minimum = minimum;
     console.log('minimum', minimum);
   this.maximum = maximum;
-    console.log('maximim', maximum);
+    console.log('maximum', maximum);
   this.averageCookiesPerCustomer = averageCookiesPerCustomer;
     console.log('averageCookiesPerCustomer',averageCookiesPerCustomer);
   timeOfDay = ['10:00','11:00','12:00','1:00','2:00','3:00','4:00','5:00'];
     console.log('timeOfDay',timeOfDay);
-  this.salePerHour= [];
-  console.log()
+
+    // this.cookiesPerHour = [];
+      // console.log('cookiesPerHour', cookiesPerHour);
+  // this.customersPerHour= customersPerHour();
+
+  // this.salePerHour= [];
+  // console.log('salePerHour', cookierPerHour);
+
+
 //Random number of customers//
-  this.customerPerHour = function(maximum, minimum){
-console.log('maximum, minimum', maximum, minimum);
-    return Math.random()*(this.maximum - this.minimum + 1 ) +  this.minimum;
+  this.customersPerHour = function(maximum, minimum){
+    console.log('customersPerHour');
+    console.log('maximum, minimum',this.maximum, this.minimum );
+    return (Math.random()*(this.maximum - this.minimum + 1 )) +  this.minimum;
   };
+  console.log('random customer per hour',this.customersPerHour());
 
 
 //cookies per hour//
@@ -79,9 +88,9 @@ this.renderCookiesPerHour = function() {
 // // // shops///
 //
 var PikePlace = new salmonCookieShop ('Pike Place',77,88, 5.2);
-var SeaTac =  new salmonCookieShop ('SeaTac', 6, 24, 1.2);
-var SouthCenter = new salmonCookieShop ('SouthCenter', 11, 38, 1.9);
-var BellevueSquare = new salmonCookieShop ('Bellevue Square', 20, 48, 3.3);
+// var SeaTac =  new salmonCookieShop ('SeaTac', 6, 24, 1.2);
+// var SouthCenter = new salmonCookieShop ('SouthCenter', 11, 38, 1.9);
+// var BellevueSquare = new salmonCookieShop ('Bellevue Square', 20, 48, 3.3);
 
 // PikePlace.render();
 // SeaTac.render();
