@@ -59,6 +59,8 @@ ul{
   font-style: italic;
   font-size: 1.3em;
   color: #723a3a;
+  background-color: #72d7da;
+margin-left: -15px;
 }
 li{
   display: inline;
@@ -78,9 +80,40 @@ h2{
   font-size: x-large;
 font-family: Verdana;
   color: #5D9997;
+  font-family: 'Vollkorn';
+}
 
-
-p{
-  font-family: Georgia;
+#story, #story2{
+  width: 391px;
+  margin: 25px;
+  font-family: 'Vollkorn';
   color: gray;
+  position:absolute;
+  z-index:4;
+}
+#story2{
+  width: 391px;
+  margin-top: 250px;
+  font-family: 'Vollkorn';
+  color: gray;
+  position:absolute;
+  z-index:4;
+
+}
+p.intor:first-letter{
+  font-size: 50px;
+  font-weight: bold;
+
+}
+#cookies{
+
+  padding: 5px;
+margin-left: 474px;
+width: 399px;
+height: 249px;
+position: absolute;
+z-index: 5;
+border-radius: 25px;
+    border-style: solid;
+
 }
