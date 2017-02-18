@@ -117,3 +117,14 @@ border-radius: 25px;
     border-style: solid;
 
 }
+#family{
+  padding: 5px;
+margin-left: 474px;
+width: 399px;
+height: 249px;
+position: absolute;
+z-index: 5;
+border-radius: 25px;
+    border-style: solid;
+
+}
