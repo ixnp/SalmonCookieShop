@@ -2,15 +2,19 @@ html{
 
 }
 body{
-  background-image: url(seattle.png);
-  o-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    position: relative;
+background-color: gray;
+width:960px;
+margin:0 auto;
   }
-.container1{
+  #coffee{
+    position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: .75;
+  }
+/*.container1{
   display: flex;
 flex-direction: column;
 justify-content: center;
@@ -19,26 +23,64 @@ margin-left: 10%;
     margin-right: 10%;
     margin-top: 5%;
     align-items: center;
+    padding: 45px;
+    position:absolute;
+  z-index:2;
 
+}*/
+#container2{
+  background-color:#fff9fb;;
+  padding:5px;
+  margin: 5px;
+  width:950px;
+  height:600px;
+  position:absolute;
+  z-index:3;
+    border-radius: 25px;
+  opacity: 0.9;
+}
+#nav{
+
+  position:absolute;
+  padding-left: 444.5px;
+  width: 929px;
+  height: 50px;
+  z-index: 4;
+  padding:10px;
+  margin: 10px;
+  font-family: 'VT323', monospace;
+  font-family: 'Vollkorn', serif;
+  color: #5D9997;
+
+}
+ul{
+  padding-left: 444.5px;
+  font-weight: bolder;
+  font-style: italic;
+  font-size: 1.3em;
+  color: #723a3a;
+}
+li{
+  display: inline;
+  padding: 24px;
 }
 h1{
-  font-family:'Patua One', cursive;
+  font-family: 'VT323', monospace;
+  font-family: 'Vollkorn', serif;
   color: #FF759D;
+  align-items: center;
+
 
 
 }
-h2,nav{
-  font-family: Verdana;
+h2{
+  margin-top:59px;
+  font-size: x-large;
+font-family: Verdana;
   color: #5D9997;
+
 
 p{
   font-family: Georgia;
   color: gray;
-}
-nav{
-  align-items: center;
-}
-
-ul{
-  list-style-type: none;
 }
