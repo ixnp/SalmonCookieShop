@@ -18,13 +18,13 @@ function salmonCookieShop(name, minimum, maximum, averageCookiesPerCustomer){
     // this.cookiesPerHour = [];
       // console.log('cookiesPerHour', cookiesPerHour);
   // this.customersPerHour= customersPerHour();
+  //
+  this.salePerHour= [];
 
-  // this.salePerHour= [];
-  // console.log('salePerHour', cookierPerHour);
 
 
 //Random number of customers//
-  this.customersPerHour = function(maximum, minimum){
+  this.customersPerHour = function(){
     console.log('customersPerHour');
     console.log('maximum, minimum',this.maximum, this.minimum );
     return (Math.random()*(this.maximum - this.minimum + 1 )) +  this.minimum;
@@ -34,13 +34,19 @@ function salmonCookieShop(name, minimum, maximum, averageCookiesPerCustomer){
 
 //cookies per hour//
 
-this.cookierPerHour = function (){
-  for(var i=0; i < this.timeOfDay.length; i++){
-    var random = this.averageCookiesPerCustomer * this.customerPerHour();
+this.cookiesPerHour = function (){
+  console.log('TOD array length', timeOfDay.length);
+  console.log('random customer per hour before loop',this.customersPerHour());
+  for(var i=0; i < timeOfDay.length; i++){
+    console.log('random customer per hour after loop',this.customersPerHour());
+    var x = this.customersPerHour()
+    var random = x * this.averageCookiesPerCustomer;
     this.salePerHour.push(random);
   };
-    console.log(cookierPerHour);
+
+    // console.log(this.cookiesPerHour());
 };
+console.log('salePerHour', this.cookiesPerHour());
 
 this.renderCookiesPerHour = function() {
   this.cookiesPurchased();
