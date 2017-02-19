@@ -40,10 +40,10 @@ this.cookiesPerHour = function (){
   for(var i=0; i < timeOfDay.length; i++){
     console.log('random customer per hour after loop',this.customersPerHour());
     var x = this.customersPerHour()
-    var random = x * this.averageCookiesPerCustomer;
+    var random = Math.round( x * this.averageCookiesPerCustomer);
     this.salePerHour.push(random);
   };
-
+  console.log(this.salePerHour);
     // console.log(this.cookiesPerHour());
 };
 console.log('salePerHour', this.cookiesPerHour());
