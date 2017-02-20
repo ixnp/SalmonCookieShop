@@ -23,7 +23,6 @@
 <div id= "container2">
   <h2>Pat's Salmon Cookies and Coffee</h2>
   <img src="family.png" id="family" alt="">
-  <img src="salmon.png" id="salmon" alt="">
 
 <table id="shopTable">
   <tr>

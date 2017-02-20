@@ -63,6 +63,24 @@ this.renderCookiesPerHour = function() {
   };
 }
 }
+function makeItemRow(obj) {
+  var row = document.createElement('tr');
+
+  var nameCell = document.createElement('td');
+  nameCell.textContent = obj.name;
+  row.appendChild(nameCell);
+
+  var priceCell = document.createElement('td');
+  priceCell.textContent = obj.timeOfDay;
+  row.appendChild(priceCell);
+
+  var taxCell = document.createElement('td');
+  taxCell.textContent = obj.averageCookiesPerCustomer;
+  row.appendChild(taxCell);
+
+
+  tbody.appendChild(row);
+}
 
     // push adds items to the end of the array and returns the new length//
 
@@ -98,7 +116,8 @@ var PikePlace = new salmonCookieShop ('Pike Place',77,88, 5.2);
 // var SouthCenter = new salmonCookieShop ('SouthCenter', 11, 38, 1.9);
 // var BellevueSquare = new salmonCookieShop ('Bellevue Square', 20, 48, 3.3);
 
-// PikePlace.render();
+PikePlace.render();
 // SeaTac.render();
 // SouthCenter.render();
 // BellevueSquare.render();
+makeAllItemRows();

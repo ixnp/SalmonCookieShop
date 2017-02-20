@@ -139,17 +139,3 @@ border-radius: 25px;
   color: white;
   font-weight: bold;
 }
-#salmon {
-  position: relative;
-  margin-top: 427px;
-  width: 10%;
-  height: 7%;
-  position: absolute;
-  z-index: 6;
-  margin-left: 0;
-
-  }
-  #Shirt{
-    position: absolute;
-    z-index: 5
-  }
