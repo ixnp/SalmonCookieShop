@@ -73,16 +73,24 @@ function salmonCookieShop(name, minimum, maximum, averageCookiesPerCustomer){
   this.makeItemRow();
 }
 
+////Lab 7 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^////////
+////Lab 8vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv//////
 
 
-// }
-// function makeAllItemRows() {
-//   for (var item of allItems) {
-//     makeItemRow(item);
-//   }
-// }
-// makeAllItemRows();
 
+var formEl = document.getElementById('form-data');
+formEl.addEventListener('submit',function(event){
+  event.preventDefault();
+    console.log(event.target.name.value);
+  var location = event.target.name.value;
+
+  // var min = event.target.minimum.value;
+  // var max = event.target.maximum.value;
+  // var avg = event.target.averageCookiesPerCustomer.value;
+
+
+new salmonCookieShop(name, minimum, maximum, aaverageCookiesPerCustomervg);
+});
 
 
 

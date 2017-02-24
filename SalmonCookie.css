@@ -38,6 +38,9 @@ margin-left: 10%;
   z-index:3;
     border-radius: 25px;
   opacity: 0.9;
+  display:flex;
+  flex-wrap: wrap;
+
 }
 #nav{
 
@@ -53,7 +56,7 @@ margin-left: 10%;
   color: #5D9997;
 
 }
-ul{
+#nav ul{
   padding-left: 444.5px;
   font-weight: bolder;
   font-style: italic;
@@ -62,6 +65,7 @@ ul{
   background-color: #72d7da;
 margin-left: -15px;
 }
+
 li{
   display: inline;
   padding: 24px;
@@ -81,6 +85,7 @@ h2{
 font-family: Verdana;
   color: #5D9997;
   font-family: 'Vollkorn';
+      margin-left: 35px;
 }
 
 #story, #story2{
@@ -100,9 +105,18 @@ font-family: Verdana;
   z-index:4;
 
 }
-p.intor:first-letter{
-  font-size: 50px;
+p {
+  justify-content: center;
+  font-size: 1em;
   font-weight: bold;
+  max-width: 30%;
+  padding:20px
+  width: 391px;
+  margin-top: 235px;
+  font-family: 'Vollkorn';
+  color: gray;
+  position: absolute;
+  padding-left: 32px;
 
 }
 #cookies{
@@ -114,7 +128,8 @@ height: 249px;
 position: absolute;
 z-index: 5;
 border-radius: 25px;
-    border-style: solid;
+border-style: solid;
+margin-top: 225px;
 
 }
 #family{
@@ -141,15 +156,28 @@ border-radius: 25px;
 }
 #salmon {
   position: relative;
-  margin-top: 427px;
+  margin-top: 190px;
   width: 10%;
   height: 7%;
   position: absolute;
   z-index: 6;
-  margin-left: 0;
+  margin-left: 14px;
 
   }
   #Shirt{
     position: absolute;
-    z-index: 5
+    
+    margin-top: 124px;
+    margin-left: 50px;
   }
+
+#container2 ul{
+position: absolute;
+  font-family: 'Vollkorn';
+  color: gray;
+      margin-top: 65px;
+}
+#container2 li{
+  margin-left: -24px;
+
+}
