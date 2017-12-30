@@ -2,14 +2,14 @@
 //pp= pike place location  //
 // table with location, time, cookies sold that hour and total per day
 
-// var allItems = [];
-var PikePlace = new salmonCookieShop ('Pike Place',77,88, 5.2);
-var SeaTac =  new salmonCookieShop ('SeaTac', 6, 24, 1.2);
-var SouthCenter = new salmonCookieShop ('SouthCenter', 11, 38, 1.9);
-var BellevueSquare = new salmonCookieShop ('Bellevue Square', 20, 48, 3.3);
+// let allItems = [];
+let PikePlace = new salmonCookieShop ('Pike Place',77,88, 5.2);
+let SeaTac =  new salmonCookieShop ('SeaTac', 6, 24, 1.2);
+let SouthCenter = new salmonCookieShop ('SouthCenter', 11, 38, 1.9);
+let BellevueSquare = new salmonCookieShop ('Bellevue Square', 20, 48, 3.3);
 
-var table = document.getElementById('shopTable');
-var tbody = document.getElementById('shopTable2');
+let table = document.getElementById('shopTable');
+let tbody = document.getElementById('shopTable2');
 
 function salmonCookieShop(name, minimum, maximum, averageCookiesPerCustomer){
   console.log('~~~~');
@@ -78,20 +78,16 @@ function salmonCookieShop(name, minimum, maximum, averageCookiesPerCustomer){
 
 
 
-var formEl = document.getElementById('form-data');
-formEl.addEventListener('submit',function(event){
+var formEl= document.getElementById('form-data');
+formEl.addEventListener('submit',function(event) {
   event.preventDefault();
-    console.log(event.target.name.value);
-  var location = event.target.name.value;
+  var location = event.target.location.value;
+  var min = event.target.min.value;
+  var max = event.target.max.value;
+  var ave = event.target.ave.value;
 
-  // var min = event.target.minimum.value;
-  // var max = event.target.maximum.value;
-  // var avg = event.target.averageCookiesPerCustomer.value;
-
-
-new salmonCookieShop(name, minimum, maximum, aaverageCookiesPerCustomervg);
+  new salmonCookieShop(location, min, max, ave);
 });
-
 
 
 

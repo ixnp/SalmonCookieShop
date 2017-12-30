@@ -1,19 +1,19 @@
 
 'use strict';
 
-var allItems = [];
-var grandTotals = {
+let allItems = [];
+const grandTotals = {
   price: 0,
   tax: 0,
   total: 0
 };
 
-var form = document.getElementById('form');
-var button = document.getElementById('fun-button');
+let form = document.getElementById('form');
+let button = document.getElementById('fun-button');
 
-var table = document.getElementById('table');
-var tbody = document.getElementById('table-body');
-var tfoot = document.getElementsByTagName('tfoot')[0];
+let table = document.getElementById('table');
+let tbody = document.getElementById('table-body');
+let tfoot = document.getElementsByTagName('tfoot')[0];
 
 new Item('socks', 8.99);
 new Item('shoes', 49.99);
@@ -49,27 +49,27 @@ Item.prototype.doAllTheMethods = function() {
 
 //compute tax & total for all objects
 function updateObjects() {
-  for (var elem of allItems) {
+  for (let elem of allItems) {
     elem.doAllTheMethods();
   }
 }
 
 function makeItemRow(obj) {
-  var row = document.createElement('tr');
+  let row = document.createElement('tr');
 
-  var nameCell = document.createElement('td');
+  let nameCell = document.createElement('td');
   nameCell.textContent = obj.name;
   row.appendChild(nameCell);
 
-  var priceCell = document.createElement('td');
+  let priceCell = document.createElement('td');
   priceCell.textContent = obj.price;
   row.appendChild(priceCell);
 
-  var taxCell = document.createElement('td');
+  let taxCell = document.createElement('td');
   taxCell.textContent = obj.tax;
   row.appendChild(taxCell);
 
-  var totalCell = document.createElement('td');
+  let totalCell = document.createElement('td');
   totalCell.textContent = obj.total;
   row.appendChild(totalCell);
 
@@ -77,27 +77,27 @@ function makeItemRow(obj) {
 }
 
 function makeAllItemRows() {
-  for (var item of allItems) {
+  for (let item of allItems) {
     makeItemRow(item);
   }
 }
 
 function makeTotalRow() {
-  var row = document.createElement('tr');
+  let row = document.createElement('tr');
 
-  var totalCell = document.createElement('th');
+  let totalCell = document.createElement('th');
   totalCell.textContent = 'Total';
   row.appendChild(totalCell);
 
-  var priceCell = document.createElement('th');
+  let priceCell = document.createElement('th');
   priceCell.textContent = grandTotals.price;
   row.appendChild(priceCell);
 
-  var taxCell = document.createElement('th');
+  let taxCell = document.createElement('th');
   taxCell.textContent = grandTotals.tax;
   row.appendChild(taxCell);
 
-  var totalCell = document.createElement('th');
+  let totalCell = document.createElement('th');
   totalCell.textContent = grandTotals.total;
   row.appendChild(totalCell);
 
@@ -113,10 +113,10 @@ function handleFormSubmit(event) {
   event.preventDefault();
   console.log(event);
 
-  var name = event.target.name.value;
-  var price = parseFloat(event.target.price.value);
+  let name = event.target.name.value;
+  let price = parseFloat(event.target.price.value);
 
-  var newItem = new Item(name, price);
+  let newItem = new Item(name, price);
   newItem.doAllTheMethods();
 
   makeItemRow(newItem);
