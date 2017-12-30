@@ -7,6 +7,7 @@
   </head>
   <body>
     <main>
+<!-- //TODO Create a from for entering a new location -->
 
       <form id="form">
         <fieldset>
@@ -23,7 +24,7 @@
 
           <label for="Maximum Customers">Maximum Customers:</label>
           <input type="number" name="Maximum Customers" min="0" required>
-
+<!-- //TODO Make avrage calulate on it's own and not an input// -->
           <label for="Average Cookie Sold per/hour">Average Cookie Sold per/hour:</label>
           <input type="number" name="Average Cookie Sold per/hour" min="0" required>
 
@@ -49,10 +50,28 @@
 
           </tfoot>
       </table>
-
+<!-- // TODO Handelbars make a tempet for stores to enter their daily cookies to add to the database.-->
+<!-- //TODO calculate avrage cookies per hour, max and min after data is entered. Have it upload to DB with new data -->
+<!-- //TODO have an option to pull information for all stores the DB based on date name, min, max,ave.  -->
+<!-- //TODO pull weeks worth of data based off store -->
+<table id="shopTable" class"box">
+    <tr>
+      <td>Store Name</td>
+      <td>Date</td>
+      <td>10:00</td>
+      <td>11:00</td>
+      <td>12:00</td>
+      <td>1:00</td>
+      <td>2:00</td>
+      <td>3:00</td>
+      <td>4:00</td>
+      <td>5:00</td>
+    </tr>
+  </table>
+  <!-- end// -->
 
     </main>
-
+<!-- //TODO put scrips in and jq library.  -->
     <script type="text/javascript" src="lab8.js"></script>
   </body>
 </html>
