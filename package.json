@@ -1,0 +1,29 @@
+{
+  "name": "cookielab",
+  "version": "1.0.0",
+  "description": "refactor of CookieLab ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ixnp/SalmonCookieShop.git"
+  },
+  "keywords": [
+    "codefellows",
+    "Salmoncookies"
+  ],
+  "author": "ix",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ixnp/SalmonCookieShop/issues"
+  },
+  "homepage": "https://github.com/ixnp/SalmonCookieShop#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "fs": "0.0.1-security", 
+    "pg": "^7.4.0"
+  }
+}
