@@ -19,6 +19,17 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('./public'));
 
+
+
+app.get('/home', (request, response) => {
+  response.sendFile('Main.html', {root: './public'});
+  client.query(`SELECT * FROM weekysales;`)
+  .then(result=>{
+    response.send(result.rows)
+  }).catch(error=> console.error(error))
+});
+
+
 app.listen(PORT,() => {
     console.log(`Server started on port ${PORT}!`);
 });
